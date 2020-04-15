@@ -25,6 +25,8 @@ let UtahGis = L.tileLayer.wms('https://geoserver.hydroshare.org/geoserver/HS-08c
     layers: 'Utah_Municipal_Boundaries', //Title name
     format: 'image/png', //depends on what you want to load in
     transparent: true,
+
+    
 }).addTo(mymap);
 
 

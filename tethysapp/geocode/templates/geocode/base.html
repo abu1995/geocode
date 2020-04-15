@@ -8,16 +8,17 @@
 </head>
 {% block title %}{{ tethys_app.name }}{% endblock %} {% block app_icon %} {# The path you provided in your app.py is accessible through the tethys_app.icon context variable #}
 <img src="{% static tethys_app.icon %}"> {% endblock %} {# The name you provided in your app.py is accessible through the tethys_app.name context variable #} {% block app_title %}{{ tethys_app.name }}{% endblock %} {% block app_navigation_items %}
-<li class="title">App Navigation</li>
-<li class="active"><a href="">Home</a></li>
-<li><a href="">Jobs</a></li>
-<li><a href="">Results</a></li>
-<li class="title">Steps</li>
-<input class="upload" id="uploadfile" type="file">
-<li><a href="">2. The map coordinates</a></li>
-<li><div id="downloads">3. Download</div></li>
+<!-- <li class="title">App Navigation</li> -->
+<ul class="menu"><li class="active"><a href="">Home</a></li>
+<!-- <li><a href="">Jobs</a></li>
+<li><a href="">Results</a></li> -->
+<!-- <li class="title">Steps</li> -->
+<li><input class="upload" id="uploadfile" type="file"></li>
+<li><div id="downloads"> Download</a></li>
+</ul>
+<!--<li><div href="downloads"> Download</div></li> -->
 <li class="separator"></li>
-<li><a href="">Get Started</a></li>
+<!-- <li><a href="">Get Started</a></li> -->
 <div id="overlay"></div>
 {% endblock %} {% block app_content %} {% endblock %} {% block app_actions %} {% endblock %} {% block content_dependent_styles %}
 <link href="{% static 'geocode/css/main.css' %}" rel="stylesheet" />
@@ -31,9 +32,5 @@
 <!-- Load Esri Leaflet from CDN -->
 <script src="https://unpkg.com/esri-leaflet@2.3.3/dist/esri-leaflet.js" integrity="sha512-cMQ5e58BDuu1pr9BQ/eGRn6HaR6Olh0ofcHFWe5XesdCITVuSBiBZZbhCijBe5ya238f/zMMRYIMIIg1jxv4sQ==" crossorigin=""></script>
 <script src="{% static 'geocode/js/main.js' %}" type="text/javascript"></script>
-
-
-
-
 
 {% endblock %}
